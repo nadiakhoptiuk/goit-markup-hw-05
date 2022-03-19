@@ -19,10 +19,11 @@
   --secondary-bgd-color: #2f303a;
   --special-bgd-color: #f5f4fa;
   --social-footer-bgd-color: rgba(255, 255, 255, 0.1);
-  --social-icon-color: rgba(175, 177, 184, 1);
 
+  --social-icon-color: rgba(175, 177, 184, 1);
   --primary-border-color: #ececec;
   --secondary-border-color: #eeeeee;
+  --animation-bgd-color: rgba(33, 150, 243, 0.9);
 }
 
 .page {
@@ -564,7 +565,7 @@
   width: 100%;
 }
 
-.projects .item {
+.project-item {
   width: calc((100% - 60px) / 3);
   border: 1px solid var(--secondary-border-color);
   background-color: var(--primary-bgd-color);
@@ -575,11 +576,11 @@
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.projects .item:not(:nth-child(3n)) {
+.project-item:not(:nth-child(3n)) {
   margin-right: 30px;
 }
 
-.projects .item:not(:nth-child(n + 7)) {
+.project-item:not(:nth-child(n + 7)) {
   margin-bottom: 30px;
 }
 
@@ -593,4 +594,32 @@
 .projects .img {
   display: block;
   width: 100%;
+}
+
+.project-thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.hide-text {
+  margin: 0;
+  padding: 63px 24px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  font-size: 18px;
+  line-height: 1.56;
+  color: var(--white-text-color);
+  background-color: var(--animation-bgd-color);
+
+  transform: translateX(-100%);
+}
+
+.project-item:hover .hide-text,
+.project-link:focus .hide-text {
+  transform: translateX(0);
+  transition: transform 250ms ease;
 }
