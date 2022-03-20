@@ -19,6 +19,7 @@
   --secondary-bgd-color: #2f303a;
   --special-bgd-color: #f5f4fa;
   --social-footer-bgd-color: rgba(255, 255, 255, 0.1);
+  --work-overlay-bgd-color: rgba(47, 48, 58, 0.8);
 
   --social-icon-color: rgba(175, 177, 184, 1);
   --primary-border-color: #ececec;
@@ -127,7 +128,19 @@
 }
 
 .site-nav .link.current {
+  position: relative;
   color: var(--accent-text-color);
+}
+
+.site-nav .link.current::after {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  content: '';
+  background-color: var(--accent-text-color);
+  height: 4px;
+  width: 100%;
+  border-radius: 2px;
 }
 
 /* contact us */
@@ -271,6 +284,29 @@
 
 .work .img {
   display: block;
+}
+
+.thumb-work {
+  position: relative;
+  width: 370px;
+  height: 294px;
+}
+
+.overlay-work {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
+  margin: 0;
+  padding: 27px 82px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--white-text-color);
+  background-color: var(--work-overlay-bgd-color);
 }
 
 /* team section */
