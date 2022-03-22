@@ -29,11 +29,12 @@
 }
 
 .page {
-  background-color: var(--primary-bgd-color);
-  color: var(--primary-text-color);
+  padding-top: 80px;
   font-family: Roboto, sans-serif;
   letter-spacing: 0.03em;
   font-size: 14px;
+  background-color: var(--primary-bgd-color);
+  color: var(--primary-text-color);
 }
 
 .container {
@@ -45,10 +46,11 @@
 
 /* style of list markers */
 .list {
-  list-style: none;
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
+
+  list-style: none;
 }
 
 /* style of titles */
@@ -56,16 +58,23 @@
   margin-top: 0;
   margin-bottom: 50px;
 
-  color: var(--primary-text-color);
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
+  color: var(--primary-text-color);
 }
 
 /* header section */
 .page-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
   border-bottom: 1px solid var(--primary-border-color);
+  background-color: var(--primary-bgd-color);
 }
 
 /* logotype */
@@ -74,12 +83,12 @@
   padding-bottom: 25px;
   margin-right: 93px;
 
-  color: var(--black-text-color-logo);
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
   text-decoration: none;
+  color: var(--black-text-color-logo);
 }
 
 .accent-text {
@@ -138,18 +147,19 @@
   bottom: -1px;
   left: 0;
 
-  content: '';
-  background-color: var(--accent-text-color);
-  height: 4px;
   width: 100%;
+  height: 4px;
+
+  content: '';
   border-radius: 2px;
+  background-color: var(--accent-text-color);
 }
 
 /* contact us */
 .contact-us .address {
-  color: var(--secondary-text-color);
-
   display: flex;
+
+  color: var(--secondary-text-color);
 }
 
 .contact-us.list {
@@ -187,28 +197,30 @@
   margin-top: 0;
   margin-bottom: 30px;
 
-  color: var(--white-text-color);
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  color: var(--white-text-color);
 }
 
 .hero-button {
   min-width: 200px;
   padding: 10px 32px;
-  cursor: pointer;
-  border: 0;
-  border-radius: 4px;
 
-  color: var(--white-text-color);
-  background-color: var(--accent-text-color);
   font-family: Roboto, sans-serif;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
+
+  color: var(--white-text-color);
+  background-color: var(--accent-text-color);
+
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .overlay {
@@ -249,6 +261,7 @@
   margin-bottom: 30px;
   padding-top: 25px;
   padding-bottom: 25px;
+
   border-radius: 4px;
   background-color: var(--special-bgd-color);
 }
@@ -267,8 +280,8 @@
   margin-top: 0;
   margin-bottom: 0;
 
-  color: var(--secondary-text-color);
   line-height: 1.71;
+  color: var(--secondary-text-color);
 }
 
 /* Work section */
@@ -290,6 +303,7 @@
 
 .thumb-work {
   position: relative;
+
   width: 370px;
   height: 294px;
 }
@@ -307,6 +321,7 @@
   line-height: 1.14;
   text-align: center;
   text-transform: uppercase;
+
   color: var(--white-text-color);
   background-color: var(--work-overlay-bgd-color);
 }
@@ -326,12 +341,12 @@
 }
 
 .members > .item {
+  padding-bottom: 30px;
+
   background-color: var(--primary-bgd-color);
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-
-  padding-bottom: 30px;
 }
 
 .members > .item:not(:last-child) {
@@ -376,8 +391,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
   width: 44px;
   height: 44px;
+
   border-radius: 50%;
   color: var(--accent-text-color);
 }
@@ -397,6 +414,7 @@
 .social-links .icon {
   width: 20px;
   height: 20px;
+
   fill: var(--social-icon-color);
 }
 
@@ -428,6 +446,7 @@
 .client .icon {
   width: 170px;
   height: 92px;
+
   border: 1px solid var(--social-icon-color);
   border-radius: 4px;
   fill: var(--social-icon-color);
@@ -451,19 +470,21 @@
   display: inline-block;
   margin-bottom: 20px;
 
-  color: var(--white-text-color);
-  text-decoration: none;
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
+
+  text-decoration: none;
+  color: var(--white-text-color);
 }
 
 .contacts .address {
-  color: var(--contacts-text-color-footer);
-  text-decoration: none;
   font-style: normal;
   line-height: 1.71;
+
+  color: var(--contacts-text-color-footer);
+  text-decoration: none;
 }
 
 .footer-address .item {
@@ -495,11 +516,11 @@
   margin-top: 0;
   margin-bottom: 20px;
 
-  color: var(--white-text-color);
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+  color: var(--white-text-color);
 }
 
 .footer.list {
@@ -509,6 +530,7 @@
 .join-us .item {
   width: 44px;
   height: 44px;
+
   background-color: var(--social-footer-bgd-color);
   border-radius: 50%;
   background-repeat: no-repeat;
@@ -550,17 +572,18 @@
 
 .button {
   padding: 6px 22px;
-  cursor: pointer;
-  border: none;
-  border-radius: 4px;
 
-  color: var(--primary-text-color);
-  background-color: var(--special-bgd-color);
   font-family: Roboto, sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
   text-align: center;
+
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  color: var(--primary-text-color);
+  background-color: var(--special-bgd-color);
 }
 
 .buttons .item:not(:last-child) {
@@ -585,26 +608,27 @@
   margin-top: 0;
   margin-bottom: 4px;
 
-  color: var(--primary-text-color);
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+  color: var(--primary-text-color);
 }
 
 .projects .text {
   margin-top: 0;
   margin-bottom: 0;
 
-  color: var(--secondary-text-color);
   font-size: 16px;
   line-height: 1.87;
+  color: var(--secondary-text-color);
 }
 
 .project-link {
   display: block;
-  text-decoration: none;
   width: 100%;
+
+  text-decoration: none;
 }
 
 .project-item {
@@ -628,10 +652,7 @@
 }
 
 .projects .sign {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 24px;
-  padding-right: 24px;
+  padding: 20px 24px;
 }
 
 .projects .img {
@@ -645,13 +666,14 @@
 }
 
 .hide-text {
-  margin: 0;
-  padding: 63px 24px;
   position: absolute;
-  width: 100%;
-  height: 100%;
   top: 0;
   left: 0;
+
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 63px 24px;
 
   font-size: 18px;
   line-height: 1.56;
@@ -663,13 +685,12 @@
 
 .project-item:hover .hide-text,
 .project-link:focus .hide-text {
-  transform: translateX(0);
+  transform: translateY(0);
   transition: transform 250ms ease;
 }
 
 /* Modal window */
 .backdrop {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -677,21 +698,22 @@
   width: 100%;
   height: 100%;
 
+  display: none;
   background-color: var(--backdrop-bgd-color);
 }
 
 .modal {
-  display: none;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
 
   height: 581px;
   width: 528px;
   background-color: var(--primary-bgd-color);
 
+  display: none;
   border-radius: 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
+  transform: translate(-50%, -50%);
 }
