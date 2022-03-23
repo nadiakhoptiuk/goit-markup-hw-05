@@ -65,14 +65,19 @@
   color: var(--primary-text-color);
 }
 
+/* hidden titles */
+.visually-hidden {
+  position: fixed;
+  transform: scale(0);
+}
+
 /* header section */
 .page-header {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 10;
-
   width: 100%;
+  z-index: 10;
 
   border-bottom: 1px solid var(--primary-border-color);
   background-color: var(--primary-bgd-color);
@@ -243,12 +248,12 @@
   padding-bottom: 94px;
 }
 
-.features .hidden {
-  margin-bottom: 0;
-}
-
 .features.list {
   display: flex;
+}
+
+.feature.item {
+  width: 270px;
 }
 
 .feature.item:not(:last-child) {
@@ -342,8 +347,7 @@
 }
 
 .members > .item {
-  padding-bottom: 30px;
-
+  width: 270px;
   background-color: var(--primary-bgd-color);
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -359,9 +363,13 @@
   line-height: 1.19;
 }
 
+.about-member {
+  padding: 30px 32px;
+}
+
 .members .photo {
   display: block;
-  margin-bottom: 30px;
+  margin-bottom: 0;
 }
 
 .member.name {
@@ -380,8 +388,7 @@
 
 .web.list {
   display: flex;
-  padding-left: 32px;
-  padding-right: 32px;
+  padding: 0;
 }
 
 .social-links > .item:not(:last-child) {
@@ -488,7 +495,7 @@
   text-decoration: none;
 }
 
-.footer-address .item {
+.contacts .item {
   margin-bottom: 9px;
 }
 
@@ -707,6 +714,8 @@
   position: absolute;
   top: 50%;
   left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 11;
 
   height: 581px;
   width: 528px;
