@@ -711,7 +711,8 @@
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Modal window */
+/* MODAL WINDOW */
+/* Styles for visible backdrop */
 .backdrop {
   position: fixed;
   top: 0;
@@ -724,23 +725,27 @@
   background-color: var(--backdrop-bgd-color);
 
   opacity: 1;
-  transform: scale(1);
-  transition: opacity 150ms cubic-bezier(0.4, 0, 0.2, 1),
-    transform 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Styles for hidden backdrop */
 .backdrop.is-hidden {
-  visibility: hidden;
+  /* visibility: hidden;  коли активна, анімація при закритті модального вікна не працює */
   pointer-events: none;
   opacity: 0;
-  transform: scale(0);
 }
 
+/* Styles for hidden modal */
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(1.1);
+  opacity: 0;
+}
+
+/* Styles for visible modal */
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   z-index: 20;
 
   height: 581px;
@@ -751,7 +756,12 @@
   border-radius: 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-  transform: translate(-50%, -50%);
+  opacity: 1;
+
+  transform: translate(-50%, -50%) scale(1);
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-button {
