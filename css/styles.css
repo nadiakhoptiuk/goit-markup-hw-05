@@ -30,9 +30,11 @@
 
 .page {
   padding-top: 80px;
+
   font-family: Roboto, sans-serif;
   letter-spacing: 0.03em;
   font-size: 14px;
+
   background-color: var(--primary-bgd-color);
   color: var(--primary-text-color);
 }
@@ -258,13 +260,14 @@
   margin-right: 30px;
 }
 
-.feature .icon {
-  display: block;
-  height: 120px;
+.features .svg-content {
   width: 270px;
+  height: 120px;
   margin-bottom: 30px;
-  padding-top: 25px;
-  padding-bottom: 25px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   border-radius: 4px;
   background-color: var(--special-bgd-color);
@@ -572,11 +575,6 @@
 .portfolio.section {
   padding-top: 94px;
   padding-bottom: 94px;
-}
-
-.portfolio-title {
-  margin-top: 0;
-  margin-bottom: 0;
 }
 
 /* buttons style */
